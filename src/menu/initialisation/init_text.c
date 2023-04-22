@@ -11,6 +11,15 @@ void init_music(menu_t *menu)
 {
     menu->music = create_music("music/prologue_hp.ogg");
     sfMusic_play(menu->music);
+    menu->barre = create_sprite("asset/barre.png", NULL);
+    sfSprite_setPosition(menu->barre.sprite, (sfVector2f){350, 500});
+    menu->barre_fx = create_sprite("asset/barre.png", NULL);
+    sfSprite_setPosition(menu->barre_fx.sprite, (sfVector2f){350, 650});
+    menu->button_barre = create_sprite("asset/bouton.png", NULL);
+    sfSprite_setPosition(menu->button_barre.sprite, (sfVector2f){360, 500});
+    menu->button_fx = create_sprite("asset/bouton.png", NULL);
+    sfSprite_setPosition(menu->button_fx.sprite, (sfVector2f){360, 650});
+    menu->return_settings = create_text("return", (sfVector2f){50, 1000}, 50, sfWhite);
 
     return;
 }
@@ -39,6 +48,14 @@ void align_text(menu_t *menu)
     sfText_setPosition(menu->exit.text, pos);
 }
 
+void init_settings(menu_t *menu)
+{
+    menu->music_txt = create_text("music", (sfVector2f){300, 450}, 50, sfWhite);
+    menu->fx = create_text("sfx", (sfVector2f){300, 600}, 50, sfWhite);
+
+    return;
+}
+
 menu_t *init_menu(void)
 {
     menu_t *menu = malloc(sizeof(menu_t));
@@ -49,6 +66,7 @@ menu_t *init_menu(void)
     menu->exit = create_text("Exit", (sfVector2f){300, 750}, 50, sfWhite);
     menu->wallpaper = create_sprite("asset/menu/wallpaper.png", NULL);
 
+    init_settings(menu);
     align_text(menu);
     init_music(menu);
     return menu;

@@ -24,6 +24,14 @@
         text_t credits;
         text_t exit;
 
+        text_t music_txt;
+        text_t fx;
+        sprite_t barre;
+        sprite_t barre_fx;
+        sprite_t button_barre;
+        sprite_t button_fx;
+        text_t return_settings;
+
         sprite_t wallpaper;
 
         sfMusic *music;
@@ -49,6 +57,9 @@
     void click_on_exit(menu_t *menu, window_t *window);
     void draw_credits(menu_t *menu, window_t *window);
     void click_credit(menu_t *menu, window_t *window);
+
+    void click_settings(menu_t *menu, window_t *window);
+    void draw_settings(menu_t *menu, window_t *window);
 
     func_ptr *init_event_ptr(void);
     func_ptr *init_event_draw(void);

@@ -11,6 +11,7 @@ extern sfColor gold_color;
 
 void draw_credits(menu_t *menu, window_t *window)
 {
+    sfRenderWindow_drawSprite(window->win, menu->wallpaper.sprite, NULL);
     get_element *elements = malloc(sizeof(get_element));
     text_t retour = create_text("return", (sfVector2f){0, 1000}, 50, sfWhite);
     if (is_survol_text(window, retour.text))

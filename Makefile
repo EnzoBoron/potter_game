@@ -14,6 +14,7 @@ SRC 	=	src/main.c								\
 			src/menu/initialisation/init_ptr.c		\
 			src/menu/draw_exit.c					\
 			src/menu/draw_credit.c					\
+			src/menu/draw_settings.c				\
 
 
 OBJ			=	$(SRC:.c=.o)
