@@ -1,0 +1,12 @@
+Ce jeu reprend certaint concepte et certaine histoire
+d'harry potter.
+
+Pour tester:
+    make re
+    ./Harry_potter
+
+Develloppeur:
+    enzo.boron@epitech.eu
+
+Graphiste:
+    Mariepladys2000@gmail.com

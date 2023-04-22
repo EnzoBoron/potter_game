@@ -5,8 +5,15 @@
 ## Compilation project
 ##
 
-SRC 	=	src/main.c				\
-			src/loop.c
+SRC 	=	src/main.c								\
+			src/loop.c								\
+			src/menu/init_menu.c					\
+			src/click_survol.c						\
+			src/menu/survol_text.c	  				\
+			src/menu/initialisation/init_text.c		\
+			src/menu/initialisation/init_ptr.c		\
+			src/menu/draw_exit.c					\
+			src/menu/draw_credit.c					\
 
 
 OBJ			=	$(SRC:.c=.o)
@@ -88,11 +95,9 @@ clean:
 	@rm -f lib/my/*.o
 	@rm -f lib/sprintf/*.o
 	@rm -f lib/printf/*.o
-	@rm -f src/game/*.o
 	@rm -f src/menu/*.o
-	@rm -f src/dead/*.o
-	@rm -f src/fight/*.o
-	@rm -f src/inventary/*.o
+	@rm -f src/menu/initialisation/*.o
+
 
 flag:
 	$(CC) $(SRC) -o $(NAME) $(LIBALL) $(CFLAG) $(CSFML)

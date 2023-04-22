@@ -11,6 +11,7 @@ text_t create_text(char *contenu, sfVector2f pos, int weight, sfColor color)
 {
     text_t text;
     text.text = sfText_create();
+    text.font = sfFont_createFromFile("font/InstrumentSerif-Italic.ttf");
     sfText_setString(text.text, contenu);
     sfText_setColor(text.text, color);
     sfText_setFont(text.text, text.font);
@@ -40,4 +41,6 @@ void destroye_text(text_t text)
 {
     sfText_destroy(text.text);
     sfFont_destroy(text.font);
+
+    return;
 }
