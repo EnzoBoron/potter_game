@@ -13,6 +13,7 @@ func_ptr *init_event_ptr(void)
     ptr_envt[0] = &click_menu;
     ptr_envt[1] = &click_credit;
     ptr_envt[2] = &click_settings;
+    ptr_envt[3] = &click_game;
 
     return ptr_envt;
 }
@@ -24,6 +25,7 @@ func_ptr *init_event_draw(void)
     ptr_draw[0] = &draw_menu;
     ptr_draw[1] = &draw_credits;
     ptr_draw[2] = &draw_settings;
+    ptr_draw[3] = &draw_game;
 
     return ptr_draw;
 }

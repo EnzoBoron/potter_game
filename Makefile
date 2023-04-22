@@ -15,6 +15,7 @@ SRC 	=	src/main.c								\
 			src/menu/draw_exit.c					\
 			src/menu/draw_credit.c					\
 			src/menu/draw_settings.c				\
+			src/game/game.c
 
 
 OBJ			=	$(SRC:.c=.o)
@@ -98,6 +99,7 @@ clean:
 	@rm -f lib/printf/*.o
 	@rm -f src/menu/*.o
 	@rm -f src/menu/initialisation/*.o
+	@rm -f src/game/*.o
 
 
 flag:

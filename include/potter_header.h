@@ -64,4 +64,6 @@
     func_ptr *init_event_ptr(void);
     func_ptr *init_event_draw(void);
 
+    void click_game(menu_t *menu, window_t *window);
+    void draw_game(menu_t *menu, window_t *window);
 #endif /*_MY_POTTER_HEADER_*/

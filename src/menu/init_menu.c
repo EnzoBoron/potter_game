@@ -13,8 +13,17 @@ void click_sett(menu_t *menu, window_t *win)
         win->status = 2;
 }
 
+void click_on_play(menu_t *menu, window_t *win)
+{
+    if (is_click_text(win, menu->play.text)) {
+        sfMusic_stop(menu->music);
+        win->status = 3;
+    }
+}
+
 void click_menu(menu_t *menu, window_t *window)
 {
+    click_on_play(menu, window);
     click_sett(menu, window);
     click_credit(menu, window);
     click_on_exit(menu, window);
